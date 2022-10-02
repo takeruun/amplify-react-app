@@ -44,3 +44,44 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
+# start Amplify
+```sh
+npm install -g @aws-amplify/cli
+```
+
+## Amplify 設定
+```sh
+amplify configure
+```
+
+```
+Follow these steps to set up access to your AWS account:
+
+Sign in to your AWS administrator account:
+https://console.aws.amazon.com/
+Press Enter to continue
+
+Specify the AWS Region
+? region:  <iam user region>
+Specify the username of the new IAM user:
+? user name: <iam user name>
+
+...
+
+Enter the access key of the newly created user:
+? accessKeyId:  <iam user access key>
+? secretAccessKey:  <iam user secret access key>
+This would update/create the AWS Profile in your local machine
+? Profile Name:  <profile name>
+
+Successfully set up the new user.
+```
+
+# Amplify プロジェクト構築
+## 初期化
+```sh
+amplify init
+```
+もろもろ入力
