@@ -1,0 +1,10 @@
+{
+  "resourceName": "amplify",
+  "tableName": "todo",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": []
+}
