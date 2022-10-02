@@ -45,13 +45,14 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-
 # start Amplify
+
 ```sh
 npm install -g @aws-amplify/cli
 ```
 
 ## Amplify 設定
+
 ```sh
 amplify configure
 ```
@@ -80,8 +81,55 @@ Successfully set up the new user.
 ```
 
 # Amplify プロジェクト構築
+
 ## 初期化
+
 ```sh
 amplify init
 ```
+
 もろもろ入力
+
+## 認証機能追加
+
+```sh
+amplify add auth
+```
+
+```
+Using service: Cognito, provided by: awscloudformation
+
+ The current configured provider is Amazon Cognito.
+
+ Do you want to use the default authentication and security configuration? Default configuration
+ Warning: you will not be able to edit these selections.
+ How do you want users to be able to sign in? Email
+ Do you want to configure advanced settings? No, I am done.
+✅ Successfully added auth resource amplify566f3f35 locally
+
+✅ Some next steps:
+"amplify push" will build all your local backend resources and provision it in the cloud
+"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud
+```
+
+・デフォルトセキュリティ設定
+・Email 認証
+
+#### 反映
+
+```sh
+amplify push
+```
+
+```
+✔ Successfully pulled backend environment dev from the cloud.
+
+    Current Environment: dev
+
+┌──────────┬─────────────────┬───────────┬───────────────────┐
+│ Category │ Resource name   │ Operation │ Provider plugin   │
+├──────────┼─────────────────┼───────────┼───────────────────┤
+│ Auth     │ amplify566f3f35 │ Create    │ awscloudformation │
+└──────────┴─────────────────┴───────────┴───────────────────┘
+? Are you sure you want to continue? Yes
+```
