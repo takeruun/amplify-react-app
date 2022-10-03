@@ -265,3 +265,4 @@ Deployed storage amplify [ ======================================== ] 1/1
 
 REST API endpoint: https://8szg58bm2h.execute-api.ap-northeast-1.amazonaws.com/dev
 ```
+**API Gateway で cors を有効にしておく**
