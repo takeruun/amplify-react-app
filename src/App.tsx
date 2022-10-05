@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { Auth,API } from 'aws-amplify';
-import { withAuthenticator } from '@aws-amplify/ui-react';
+import { withAuthenticator, Authenticator } from '@aws-amplify/ui-react';
 import '@aws-amplify/ui-react/styles.css';
 
 // SingOut
@@ -15,9 +15,13 @@ function App() {
 
   useEffect(() => {
     Auth.currentUserInfo().then((user) => {
+      console.log(user == null);
+      
       if(user) {
         setUser(user)
       }
+    }).catch((e) => {
+      console.log(e);
     });
 
     API.get('amplify', '/amplify',{
